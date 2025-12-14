@@ -1,674 +1,1265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Copywriter Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fahad Ali – Copywriter Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-<style>
-/* ---------------------- GLOBAL RESET ---------------------- */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background: #0a1a2b; color: #fff; scroll-behavior: smooth; }
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+  />
 
-/* ---------------------- NAVBAR ---------------------- */
-.floating-menu {
-  position: fixed; top: 0; left: 0; right: 0;
-  background: rgba(10,26,43,0.95);
-  padding: 12px 0;
-  display: flex; justify-content: center;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-.floating-menu a {
-  margin: 0 18px; font-weight: 500;
-  text-decoration: none; color: #fff;
-  transition: 0.3s;
-}
-.floating-menu a:hover { color: #1dd1a1; }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
 
-/* ---------------------- SECTION ---------------------- */
-section {
-  position: relative;
-  margin: 50px auto;
-  padding: 40px 30px;
-  border-radius: 12px;
-  overflow: hidden;
-  min-height: 300px;
-}
-section::before {
-  content: "";
-  position: absolute;
-  top:0; left:0; right:0; bottom:0;
-  background-size: cover;
-  background-position: center;
-  filter: blur(8px) brightness(0.4);
-  z-index: 0;
-}
-.section-content {
-  position: relative; z-index:1;
-  background: rgba(10,26,43,0.7);
-  padding: 30px; border-radius: 12px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ---------------------- SECTION TITLE ---------------------- */
-.section-title { 
-  text-align: center; font-size: 28px; font-weight: 700; margin-bottom: 10px; color: #fff; 
-}
-.underline {
-  width: 60px; height: 3px; background: #1dd1a1; margin: 8px auto 30px auto; border-radius: 50px;
-}
+    body {
+      background: #050b13;
+      color: #ffffff;
+    }
 
-/* ---------------------- BIO ---------------------- */
-.bio-text {
-  text-align: center; font-size: 18px; line-height: 1.6;
-}
+    main {
+      padding-top: 72px;
+    }
 
-/* ---------------------- PORTFOLIO ---------------------- */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-.portfolio-item {
-  background: rgba(255,255,255,0.1);
-  padding: 20px; border-radius: 12px; text-align: center;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-  cursor: pointer;
-}
-.portfolio-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-  background: rgba(255,255,255,0.15);
-}
-.portfolio-item img { width:70px; margin-bottom:12px; }
-.portfolio-item h4 { margin-top:10px; font-size:20px; color:#1dd1a1; }
+    .floating-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(5, 11, 19, 0.95);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(12px);
+    }
 
-/* ---------------------- MODALS ---------------------- */
+    .floating-menu a {
+      font-weight: 500;
+      text-decoration: none;
+      color: #e5f0ff;
+      font-size: 15px;
+      letter-spacing: 0.03em;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color 0.25s ease;
+    }
 
-.modal {
-  display: none; position: fixed; top:0; left:0; width:100%; height:100%;
-  background: rgba(0,0,0,0.85);
-  justify-content: center; align-items: center; z-index:2000;
-}
-.modal-content {
-  background:  #0a1a2b;
-  color: #fff; /* keep text readable */
-  width: 70%; max-width:700px;
-  padding:30px; border-radius:12px;
-  position: relative; max-height: 80vh; overflow-y:auto;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  line-height: 30px; 
-}
-.close-modal {
-  position: absolute; top:15px; right:20px;
-  font-size:24px; font-weight:bold;
-  cursor:pointer; color:#1dd1a1;
-}
+    .floating-menu a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: #1dd1a1;
+      border-radius: 999px;
+      transition: width 0.25s ease;
+    }
 
-/* -----------------  MODALS STYLE APPENDED ---------------- */
+    .floating-menu a:hover {
+      color: #1dd1a1;
+    }
 
-/* Center the brand name in modal header */
-.modal-header {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 700;
-    color: #1dd1a1; /* accent color */
-    margin-bottom: 25px; /* space below header */
-}
+    .floating-menu a:hover::after {
+      width: 100%;
+    }
+    section {
+      position: relative;
+      margin: 60px auto;
+      padding: 70px 24px;
+      max-width: 1100px;
+      border-radius: 18px;
+      overflow: hidden;
+    }
 
-/* Space between Marketing Tool and Client Brief */
-.modal-body p {
-    margin-bottom: 15px; /* default spacing between lines */
-}
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+      z-index: 0;
+    }
 
-/* Highlight Client Brief and Final Deliverable */
-.modal-body p strong {
-    display: block;
-    margin-bottom: 5px;
-}
+    #bio::before {
+      background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');
+    }
 
-/* Apply white border box for Client Brief and Final Deliverable */
-.modal-body p:nth-of-type(2),
-.modal-body p:nth-of-type(3) {
-    border: 1px solid #fff;
-    padding: 12px 15px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.05); /* subtle dark overlay for readability */
-    margin-bottom: 20px; /* spacing between the two boxes */
-}
+    #services::before {
+      background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80');
+    }
 
-/* ---------------------- TESTIMONIALS ---------------------- */
-.testimonial-grid {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
-}
-.testimonial {
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(5px);
-  border-radius: 12px; padding:20px; width:300px;
-  font-style: italic; color:#fff;
-}
-.testimonial h5 { margin-top:10px; font-weight:600; color:#1dd1a1;text-align:right;}
+    #portfolio::before {
+      background-image: url('https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&w=1600&q=80');
+    }
 
-/* ---------------------- CONTACT ---------------------- */
-.contact-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
-.contact-details p { margin-bottom:10px; font-size:18px; display:flex; align-items:center; gap:10px; }
-.contact-form input, .contact-form textarea {
-  width:100%; padding:12px; margin-bottom:12px; border-radius:6px; border:1px solid #ccc;
-}
-.contact-form button {
-  background:#1dd1a1; padding:12px 20px; border:none; color:#fff;
-  font-size:16px; border-radius:6px; cursor:pointer;
-}
+    #why-me::before {
+      background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80');
+    }
 
-/* ---------------------- SOCIAL ICONS ---------------------- */
-.social-icons { display:flex; gap:15px; margin-top:10px; }
-.social-icons a { color:#fff; font-size:24px; transition:0.3s; }
-.social-icons a:hover { color:#1dd1a1; }
+    #testimonials::before {
+      background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80');
+    }
 
-/* ---------------------- FOOTER ---------------------- */
-footer { text-align:center; padding:25px; background:#0a1a2b; color:#fff; }
-</style>
-<!-- ===================== MODAL CSS ===================== -->
-<style>
-/* Modal overlay */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(6px);
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
+    #faq::before {
+      background-image: url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80');
+    }
 
-/* Modal container */
-.modal-content {
-  background: #0a1a2b;
-  max-width: 780px;
-  width: 100%;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-  position: relative;
-  animation: modalFade 0.35s ease;
-}
+    #contact::before {
+      background-image: url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80');
+    }
 
-/* Title */
-.modal-title {
-  margin-top: 0;
-  text-align: center;
-  font-size: 28px;
-  color: #0a1a2b;
-  margin-bottom: 20px;
-  letter-spacing: .3px;
-}
+    .section-content {
+      position: relative;
+      z-index: 1;
+      background: rgba(5, 11, 19, 0.78);
+      padding: 32px 28px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+    }
 
-/* Block styling */
-.modal-block {
-  margin-bottom: 28px;
-}
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #f9fbff;
+    }
 
-.modal-block h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #0a1a2b;
-  font-weight: 600;
-}
+    .underline {
+      width: 64px;
+      height: 3px;
+      background: #1dd1a1;
+      margin: 10px auto 24px auto;
+      border-radius: 999px;
+    }
+    .bio-text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0 auto;
+      color: #d8e4ff;
+    }
 
-.modal-block p {
-  background: #f5f8fc;
-  padding: 14px 16px;
-  border-radius: 10px;
-  line-height: 1.6;
-  font-size: 15px;
-  color: #23384d;
-}
+    .bio-highlight {
+      display: block;
+      margin-top: 16px;
+      font-size: 15px;
+      color: #9cb6ff;
+    }
 
-.modal-block.large p {
-  min-height: 160px;
-  white-space: pre-line;
-}
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+      margin-top: 10px;
+    }
 
-/* Close button */
-.modal-close {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #FFFFFF;
-  transition: 0.2s;
-}
+    .service-card {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 14px;
+      padding: 20px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1 1 220px;
+      max-width: 260px;
+      transition: all 0.25s ease;
+      cursor: default;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+    }
 
-.modal-close:hover {
-  color: #c0392b;
-}
-.modal-header{
-text-align: center;
-font-size: 20px; 
-font-weight: bold;
-}
+    .service-card:hover {
+      transform: translateY(-3px) scale(1.015);
+      box-shadow: 0 10px 22px rgba(29, 209, 161, 0.18);
+      border-color: rgba(29, 209, 161, 0.5);
+    }
 
-/* Animation */
-@keyframes modalFade {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+    .service-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
 
-.brief-box {
-  border: 1px solid #ffffff;
-  padding: 14px;
-  border-radius: 4px;
-  margin-top: 10px;
-  background: rgba(255,255,255,0.03);
-}
+    .service-card i {
+      font-size: 20px;
+      color: #1dd1a1;
+    }
 
-</style>	
+    .service-card-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #c8d5ff;
+      line-height: 1.6;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .portfolio-item {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 20px 18px;
+      border-radius: 14px;
+      text-align: left;
+      color: #f5f8ff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-3px) scale(1.015);
+      box-shadow: 0 10px 22px rgba(29, 209, 161, 0.18);
+      border-color: rgba(29, 209, 161, 0.5);
+    }
+
+    .portfolio-item-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(29, 209, 161, 0.12);
+      color: #1dd1a1;
+      margin-bottom: 4px;
+    }
+
+    .portfolio-item h4 {
+      margin-top: 4px;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .portfolio-item p {
+      font-size: 14px;
+      color: #c7d4ff;
+    }
+
+    .why-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 14px;
+      padding: 14px 16px;
+      min-width: 260px;
+      max-width: 320px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+      transition: all 0.25s ease;
+    }
+
+    .why-item:hover {
+      transform: translateY(-3px) scale(1.015);
+      box-shadow: 0 10px 22px rgba(29, 209, 161, 0.18);
+      border-color: rgba(29, 209, 161, 0.5);
+    }
+
+    .why-item i {
+      color: #1dd1a1;
+      margin-top: 4px;
+    }
+
+    .why-item p {
+      font-size: 15px;
+      color: #d6e2ff;
+      line-height: 1.6;
+    }
+    .testimonial-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 18px 16px;
+      width: 260px;
+      min-height: 140px;
+      color: #eaf0ff;
+      font-size: 14px;
+      line-height: 1.6;
+      position: relative;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+      transition: all 0.25s ease;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-3px) scale(1.015);
+      box-shadow: 0 10px 22px rgba(29, 209, 161, 0.18);
+    }
+
+    .testimonial::before {
+      content: "“";
+      position: absolute;
+      top: -12px;
+      left: 12px;
+      font-size: 40px;
+      color: rgba(255, 255, 255, 0.08);
+    }
+
+    .testimonial h5 {
+      margin-top: 12px;
+      font-weight: 600;
+      color: #1dd1a1;
+      text-align: right;
+      font-size: 13px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+      transition: all 0.25s ease;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-3px) scale(1.015);
+      box-shadow: 0 10px 22px rgba(29, 209, 161, 0.18);
+    }
+
+    .faq-item h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .faq-item p {
+      font-size: 14px;
+      color: #cbd6ff;
+      line-height: 1.6;
+    }
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 28px;
+    }
+
+    .contact-details p {
+      margin-bottom: 12px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #d9e4ff;
+    }
+
+    .contact-details i {
+      color: #1dd1a1;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 11px 12px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(203, 213, 225, 0.6);
+      background: rgba(4, 10, 18, 0.8);
+      color: #f9fbff;
+      font-size: 14px;
+      transition: all 0.25s ease;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .contact-form button {
+      background: #1dd1a1;
+      padding: 11px 18px;
+      border: none;
+      color: #051019;
+      font-size: 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all 0.25s ease;
+      box-shadow: 0 12px 30px rgba(29, 209, 161, 0.3);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(10px);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal.show {
+      display: flex;
+    }
+	
+	.modal-header {
+	  text-align: center;
+	  font-size: 22px;
+	  font-weight: 800;
+	  color: #1dd1a1;
+	  margin-bottom: 20px;
+	  letter-spacing: 0.3px;
+	}
+    .modal-content {
+      background: #050b13;
+      color: #ffffff;
+      max-width: 780px;
+      width: 100%;
+      padding: 28px 26px;
+      border-radius: 16px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+      position: relative;
+      animation: modalFade 0.28s ease;
+      line-height: 1.7;
+    }
+	.brief-box {
+	  border: 1px solid #ffffff;
+	  padding: 16px 18px;
+	  border-radius: 12px;
+	  margin: 24px 0;
+	  background: rgba(255, 255, 255, 0.03);
+	  font-size: 14px;
+	  line-height: 1.7;
+	}
+
+	
+    footer {
+      text-align: center;
+      padding: 22px 16px 30px;
+      background: #050b13;
+      color: #7f8baa;
+      font-size: 13px;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+    }
+  </style>
 </head>
 <body>
+  <!-- NAVBAR -->
+  <nav class="floating-menu">
+    <a href="#bio">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#why-me">Why Me</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- NAVBAR -->
-<div class="floating-menu">
-  <a href="#bio">About</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<!-- BIO SECTION -->
-<section id="bio">
-  <div class="section-content"  style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');"	>
-    <div class="section-title">About Me</div>
-    <div class="underline"></div>
-    <p class="bio-text">
-      I’m a conversion-focused copywriter helping brands turn browsers into buyers with sharp messaging, strategic storytelling, and persuasive, human-centered copy. With experience across 9 major marketing tools—from email sequences to VSL scripts—I craft words that sell, engage, and build trust.
-    </p>
-  </div>
-</section>
-
-<!-- PORTFOLIO SECTION -->
-<section id="portfolio">
-  <div class="section-content" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');" >
-      <div class="section-title">Featured Work</div>
-    <div class="underline"></div>
-    <div class="portfolio-grid" >
-      <div class="portfolio-item" data-modal="modal1"><img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png"/><h4>Sales Page</h4><p>Sales Page</p></div>
-      <div class="portfolio-item" data-modal="modal2"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png"/><h4>Email Sequence</h4><p>Email Sequence</p></div>
-      <div class="portfolio-item" data-modal="modal3"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png"/><h4>Landing Page</h4><p>Landing Page</p></div>
-      <div class="portfolio-item" data-modal="modal4"><img src="https://cdn-icons-png.flaticon.com/512/565/565341.png"/><h4>Onboarding Flow</h4><p>Onboarding Flow</p></div>
-      <div class="portfolio-item" data-modal="modal5"><img src="https://cdn-icons-png.flaticon.com/512/2203/2203141.png"/><h4>VSL Script</h4><p>VSL Script</p></div>
-      <div class="portfolio-item" data-modal="modal6"><img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png"/><h4>Product Descriptions</h4><p>Product Descriptions</p></div>
-      <div class="portfolio-item" data-modal="modal7"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png"/><h4>App Copy</h4><p>App Copy</p></div>
-      <div class="portfolio-item" data-modal="modal8"><img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png"/><h4>Lead Magnet</h4><p>Lead Magnet</p></div>
-      <div class="portfolio-item" data-modal="modal9"><img src="https://cdn-icons-png.flaticon.com/512/1179/1179120.png"/><h4>Video Script</h4><p>Video Script</p></div>
-	  <div class="portfolio-item" data-modal="modal1"><img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png"/><h4>Sales Page</h4><p>Sales Page</p></div>
-      <div class="portfolio-item" data-modal="modal2"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png"/><h4>Email Sequence</h4><p>Email Sequence</p></div>
-      <div class="portfolio-item" data-modal="modal3"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png"/><h4>Landing Page</h4><p>Landing Page</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- MODALS -->
-<!-- ===================== MODAL 1 ===================== -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">FreeLanceFlow</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Sales Page</p>
-
-      <div class="brief-box">
-		Client Brief:</br>
-        We are launching a new AI-powered budgeting tool for freelancers. The goal is to create a high-converting sales page that highlights simplicity, automation, and time-saving benefits. Target audience: freelancers aged 22–40 who struggle with managing irregular income.
+  <main>
+    <!-- BIO -->
+    <section id="bio">
+      <div class="section-content">
+        <div class="section-title">About Me</div>
+        <div class="underline"></div>
+        <p class="bio-text">
+          I’m a conversion-focused copywriter helping brands turn browsers into buyers with sharp messaging,
+          strategic storytelling, and persuasive, human-centered copy. With experience across multiple marketing tools—
+          from email sequences to VSL scripts—I craft words that sell, engage, and build trust.
+          <span class="bio-highlight">
+            Whether you’re launching a new offer or refining a proven funnel, I help you say the right thing,
+            to the right people, at the moment it matters.
+          </span>
+        </p>
       </div>
+    </section>
 
-      <div class="brief-box">
-	  Final Output:</br>
-        Take control of irregular income in minutes, not months. FreeLanceFlow is the AI-powered budgeting tool built for freelancers who want clarity without spreadsheets. It analyzes your earnings, smooths unpredictable income, and gives you a simple monthly “safe-to-spend” number you can trust. Automatic tax buckets, savings recommendations, and a 30–90 day cashflow forecast help you plan confidently. Stop guessing and start using a system designed for the way you actually earn. Start your free 14‑day trial today.
-      </div>
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="section-content">
+        <div class="section-title">Services</div>
+        <div class="underline"></div>
 
-    </div>
-  </div>
-</div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card-header">
+              <i class="fa-solid fa-file-lines"></i>
+              <div class="service-card-title">Sales Pages & Landing Pages</div>
+            </div>
+            <p>Long-form and short-form pages designed to convert visitors into buyers, sign-ups, or booked calls.</p>
+          </div>
 
-<!-- ===================== MODAL 2 ===================== -->
-<div id="modal2" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">LumiGlow Skincare</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Email Copy</p>
+          <div class="service-card">
+            <div class="service-card-header">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <div class="service-card-title">Email Sequences</div>
+            </div>
+            <p>Nurture, launch, and onboarding sequences that build trust and generate repeat revenue.</p>
+          </div>
 
-      <div class="brief-box">
-	  Client Brief:</br>
-        A skincare brand is promoting its new Vitamin C serum. Write a promotional email for existing customers, focusing on brighter skin, reduced dark spots, and a 20% launch discount valid for 72 hours.
-      </div>
+          <div class="service-card">
+            <div class="service-card-header">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <div class="service-card-title">Product Descriptions</div>
+            </div>
+            <p>Benefit-driven product copy for e-commerce, SaaS, and digital products that makes buying feel obvious.</p>
+          </div>
 
-      <div class="brief-box">
-	  Final Output:</br>
-        Hi there, your glow routine just got an upgrade. Our new LumiGlow C‑Boost Serum is formulated with high‑potency Vitamin C to brighten dull skin, fade dark spots, and protect against daily stress. It absorbs fast, layers easily, and delivers visible radiance with consistent use. For the next 72 hours, enjoy 20% off as part of our exclusive launch. Claim your discount and start your brighter‑skin journey today.
-      </div>
+          <div class="service-card">
+            <div class="service-card-header">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <div class="service-card-title">App & UX Microcopy</div>
+            </div>
+            <p>Button labels, tooltips, and in-app flows that feel intuitive, friendly, and conversion-aware.</p>
+          </div>
 
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 3 ===================== -->
-<div id="modal3" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">DeskStrong Coaching</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Landing Page</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A fitness coach is offering a 6-week home workout program for busy professionals. Create a landing page that emphasizes convenience, no equipment needed, and visible results in 30 days.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        Get stronger in just 6 weeks without stepping into a gym. DeskStrong is a no‑equipment home workout program built for busy professionals who want real results in less time. Each session is under 30 minutes, easy to follow, and designed to fit into your workday. Expect improved energy, better strength, and visible changes within 30 days. Join the program and start your transformation today.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 4 ===================== -->
-<div id="modal4" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">CalmNest</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Onboarding Flow</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A meditation app needs a 3-step onboarding flow that welcomes new users, explains benefits, and encourages them to complete their first 5-minute session.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        Welcome to CalmNest — your space to slow down and reset. A few minutes a day can help you feel calmer, sleep better, and stay more focused. We’ll guide you through your first 5‑minute session so you can experience the difference right away. Find a comfortable spot, breathe deeply, and begin your journey toward a clearer, calmer mind.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 5 ===================== -->
-<div id="modal5" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">CreatorScale Academy</div>
-    <div class="modal-body">
-      <p>Marketing Tool: VSL Script</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A course creator is selling a “YouTube Growth Blueprint” program. Write a VSL script intro that hooks viewers, highlights common struggles, and positions the course as the solution.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        If you’ve been posting on YouTube and still feel invisible, you’re not alone. Most creators work hard but lack a repeatable system. The YouTube Growth Blueprint shows you how to choose winning topics, craft clickable titles, and structure videos that keep viewers watching. This program replaces guesswork with a proven strategy designed for real growth. Stay with us to see how the Blueprint can transform your channel.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 6 ===================== -->
-<div id="modal6" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">EcoSip Co.</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Product Description</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        An e-commerce store is launching a line of eco-friendly water bottles. Write product descriptions for a 750ml insulated bottle focusing on sustainability, durability, and temperature retention.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        The EcoSip 750ml Insulated Bottle keeps drinks cold for 24 hours and hot for 12, thanks to double‑wall stainless steel construction. It’s durable, leak‑proof, and designed to replace years of single‑use plastic. With a scratch‑resistant finish and perfect everyday capacity, it’s ideal for work, travel, and workouts. Sip sustainably and stay refreshed wherever you go.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 7 ===================== -->
-<div id="modal7" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">TaskNest</div>
-    <div class="modal-body">
-      <p>Marketing Tool: App Copy</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A task management app needs microcopy for buttons, tooltips, and empty states. Tone should be friendly, motivating, and productivity-focused.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        Add New Task. Start Today. Mark as Done. Save for Later.  
-        Set a due date so future‑you doesn’t have to remember.  
-        Mark what matters most — we’ll help you focus.  
-        Group tasks with tags to see the bigger picture.  
-        No tasks yet — let’s create your first small win.  
-        Nothing done yet — check something off today.  
-        Organize your work into projects so every task has a home.  
-        Progress isn’t about doing everything — just the right next thing.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 8 ===================== -->
-<div id="modal8" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">AdBlueprint Agency</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Lead Magnet</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A marketing agency is offering a free PDF titled “10 High-Converting Ad Templates.” Write a lead magnet opt-in page brief that highlights value and instant usability.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        Steal 10 proven ad templates you can launch today. This free PDF gives you plug‑and‑play frameworks used in real campaigns, complete with hooks, angles, and fill‑in‑the‑blank prompts. Stop staring at a blank page and start creating ads that convert. Enter your email to get instant access — no fluff, just actionable templates.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 9 ===================== -->
-<div id="modal9" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">MarinaVista Realty</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Video Script</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A real estate agent wants a 45-second social media video script promoting a new luxury apartment listing with sea views, modern amenities, and flexible payment plans.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        Imagine waking up to a panoramic sea view every morning. MarinaVista Residences offers modern interiors, floor‑to‑ceiling windows, a fully equipped kitchen, and premium finishes throughout. Enjoy access to a private gym, infinity pool, and residents‑only lounge. With 24/7 security, dedicated parking, and flexible payment plans, your dream home is closer than you think. Book a viewing today and experience MarinaVista for yourself.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 10 ===================== -->
-<div id="modal10" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">LingoPulse</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Sales Page</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A language-learning platform is launching a new AI tutor. Create a sales page brief focusing on personalized lessons, real-time corrections, and faster fluency.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        Speak confidently faster with LingoPulse AI Tutor. It adapts to your level, corrects mistakes in real time, and helps you practice natural conversations anytime. Build fluency through short, focused sessions designed around your goals. Thousands of learners already trust LingoPulse to improve pronunciation, grammar, and everyday speaking skills. Try it free for 7 days and experience the difference.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 11 ===================== -->
-<div id="modal11" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">FreshStart Nutrition</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Lead Magnet</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A nutritionist is offering a free “7-Day Meal Prep Guide.” Write a lead magnet brief that emphasizes simplicity, healthy eating, and time savings.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        Eat healthier all week with one simple prep day. The free 7‑Day Meal Prep Guide includes a full weekly menu, step‑by‑step prep instructions, a printable shopping list, and storage tips to keep meals fresh. No strict diets — just practical, easy choices that save time and boost energy. Enter your email to get the guide delivered instantly.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- ===================== MODAL 12 ===================== -->
-<div id="modal12" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <div class="modal-header">SyncBoard</div>
-    <div class="modal-body">
-      <p>Marketing Tool: Landing Page</p>
-
-      <div class="brief-box">
-	  Client Brief:</br>
-        A SaaS startup is launching a project collaboration tool for remote teams. Create a landing page brief focusing on real-time chat, shared boards, and seamless file management.
-      </div>
-
-      <div class="brief-box">
-	  Final Output:</br>
-        SyncBoard brings real‑time chat, shared boards, and file management into one workspace for remote teams. Keep conversations organized, plan visually, and access files without digging through threads. Reduce meetings, increase clarity, and help your team stay aligned from anywhere. Start your free team trial today.
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" >
-  <div class="section-content" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
-    <div class="section-title">Testimonials</div>
-    <div class="underline"></div>
-    <div class="testimonial-grid">
-      <div class="testimonial">“Fahad instantly captured our brand’s tone and delivered copy that exceeded expectations.”<h5>Maya — Lumen Skincare</h5></div>
-      <div class="testimonial">“Fahad turned our ideas into sharp, high-converting copy. Truly impressive work.”<h5>Daniel Carter — BoltGear</h5></div>
-      <div class="testimonial">“Working with Fahad was smooth and impactful — his copy elevated our entire campaign.”<h5>Alina Khurana — CloudSync</h5></div>
-	  <div class="testimonial">“Fahad delivered clean, compelling copy that made our product feel instantly premium.”<h5>Daniel Carter — BoltGear</h5></div>
-      <div class="testimonial">“Love working with Fahad — his copy is precise, modern, and always on point.”<h5>Rafael Ortiz — NovaTech AI</h5></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" >
-  <div class="section-content" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');">
-    <div class="section-title">Contact</div>
-	<div class="underline"></div>
-    <div class="contact-wrapper">
-      <div class="contact-details" style="  line-height: 50px;">
-		
-        <p><i class="fa fa-envelope"></i> newwebgenesys@gmail.com</p>
-        <p><i class="fa fa-phone"></i> +92 333 3106127</p>
-        <p><i class="fa fa-home"></i> Karachi – Pakistan</p>
-        <div class="social-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-whatsapp"></i></a>
+          <div class="service-card">
+            <div class="service-card-header">
+              <i class="fa-solid fa-video"></i>
+              <div class="service-card-title">Video & VSL Scripts</div>
+            </div>
+            <p>Structured, story-driven scripts for video sales letters, social ads, and promo videos.</p>
+          </div>
         </div>
       </div>
-      <div class="contact-form">
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Message" rows="5"></textarea>
-        <button>Send Message</button>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <div class="section-content">
+        <div class="section-title">Featured Work</div>
+        <div class="underline"></div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-modal="modal1">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <h4>Sales Page – FreeLanceFlow</h4>
+            <p>AI-powered budgeting tool sales page focused on clarity, trust, and trial sign-ups.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal2">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <h4>Email Copy – LumiGlow Skincare</h4>
+            <p>Promo email for a Vitamin C serum launch with urgency and benefit-led messaging.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal3">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-globe"></i></div>
+            <h4>Landing Page – DeskStrong Coaching</h4>
+            <p>Program page for a 6-week home workout offer aimed at busy professionals.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal4">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-seedling"></i></div>
+            <h4>Onboarding Flow – CalmNest</h4>
+            <p>3-step onboarding flow for a meditation app that increases first-session completion.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal5">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-film"></i></div>
+            <h4>VSL Script – CreatorScale Academy</h4>
+            <p>Intro script for a YouTube growth program that hooks creators and frames the solution.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal6">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-bottle-water"></i></div>
+            <h4>Product Description – EcoSip Co.</h4>
+            <p>Conversion-focused description for a sustainable insulated water bottle line.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal7">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-list-check"></i></div>
+            <h4>App Microcopy – TaskNest</h4>
+            <p>Friendly, motivating microcopy for task states, tooltips, and action buttons.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal8">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-magnet"></i></div>
+            <h4>Lead Magnet – AdBlueprint Agency</h4>
+            <p>Opt-in page brief for “10 High-Converting Ad Templates” PDF.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal9">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-house-chimney"></i></div>
+            <h4>Video Script – MarinaVista Realty</h4>
+            <p>45-second listing video script for a luxury sea-view apartment.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal10">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-language"></i></div>
+            <h4>Sales Page – LingoPulse AI Tutor</h4>
+            <p>Sales page brief centered on personalized lessons and real-time corrections.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal11">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-carrot"></i></div>
+            <h4>Lead Magnet – FreshStart Nutrition</h4>
+            <p>Opt-in brief for a “7-Day Meal Prep Guide” focused on ease and time savings.</p>
+          </div>
+
+          <div class="portfolio-item" data-modal="modal12">
+            <div class="portfolio-item-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h4>Landing Page – SyncBoard</h4>
+            <p>Landing page brief for a remote collaboration tool with boards and file management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ME -->
+    <section id="why-me">
+      <div class="section-content">
+        <div class="section-title">Why Work With Me</div>
+        <div class="underline"></div>
+
+        <div class="why-list">
+          <div class="why-item">
+            <i class="fa-solid fa-bullseye"></i>
+            <p>I blend strategy and creativity—every line serves a clear goal, whether that’s a click, a reply, or a sale.</p>
+          </div>
+
+          <div class="why-item">
+            <i class="fa-solid fa-diagram-project"></i>
+            <p>Experience across funnels, email, onboarding, and product copy means your messaging stays consistent end-to-end.</p>
+          </div>
+
+          <div class="why-item">
+            <i class="fa-solid fa-stopwatch"></i>
+            <p>Clear communication, fast response times, and structured delivery so projects move smoothly without micro-managing.</p>
+          </div>
+
+          <div class="why-item">
+            <i class="fa-solid fa-users-line"></i>
+            <p>I write for humans first, algorithms second—balancing psychology, clarity, and brand voice.</p>
+          </div>
+
+          <div class="why-item">
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <p>I bring fresh eyes and zero bad habits—everything I write is built on modern frameworks, not outdated templates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="section-content">
+        <div class="section-title">Testimonials</div>
+        <div class="underline"></div>
+
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            Fahad instantly captured our brand’s tone and delivered copy that exceeded expectations.
+            <h5>Maya — Lumen Skincare</h5>
+          </div>
+
+          <div class="testimonial">
+            Fahad turned our ideas into sharp, high-converting copy. Truly impressive work.
+            <h5>Daniel Carter — BoltGear</h5>
+          </div>
+
+          <div class="testimonial">
+            Working with Fahad was smooth and impactful — his copy elevated our entire campaign.
+            <h5>Alina Khurana — CloudSync</h5>
+          </div>
+
+          <div class="testimonial">
+            Fahad delivered clean, compelling copy that made our product feel instantly premium.
+            <h5>Daniel Carter — BoltGear</h5>
+          </div>
+
+          <div class="testimonial">
+            Love working with Fahad — his copy is precise, modern, and always on point.
+            <h5>Rafael Ortiz — NovaTech AI</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-content">
+        <div class="section-title">FAQ</div>
+        <div class="underline"></div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h4>What types of projects do you take on?</h4>
+            <p>I work on sales pages, landing pages, email sequences, onboarding flows, product descriptions, app microcopy, lead magnets, and video/VSL scripts.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>How does your process work?</h4>
+            <p>We start with a short discovery chat or brief, then I research, draft, and refine based on your feedback. You get clear timelines and deliverables from day one.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Can you match my existing brand voice?</h4>
+            <p>Yes. I review your current assets and build a mini voice guide to keep everything aligned.</p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Do you offer ongoing support or retainers?</h4>
+            <p>For ongoing campaigns, launches, or recurring content, I’m open to retainer-based work with a consistent monthly scope.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-content">
+        <div class="section-title">Contact Me</div>
+        <div class="underline"></div>
+
+        <div class="contact-wrapper">
+          <div class="contact-details">
+            <p><i class="fa-solid fa-location-dot"></i> Based in Karachi, Pakistan – working with clients worldwide.</p>
+            <p><i class="fa-solid fa-clock"></i> Typically replies within 24 hours on business days.</p>
+            <p><i class="fa-solid fa-circle-info"></i> Share as much context as you like — I’ll ask smart follow-ups.</p>
+          </div>
+
+          <div class="contact-form">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" />
+                <small class="error-message" id="nameError"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="your@email.com" />
+                <small class="error-message" id="emailError"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Tell me about your project..."></textarea>
+                <small class="error-message" id="messageError"></small>
+              </div>
+
+              <button type="button" id="sendBtn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== MODALS ===================== -->
+
+  <!-- MODAL 1 -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">FreeLanceFlow</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Sales Page</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          We are launching a new AI-powered budgeting tool for freelancers. The goal is to create a high-converting
+          sales page that highlights simplicity, automation, and time-saving benefits.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Take control of irregular income in minutes, not months. FreeLanceFlow is the AI-powered budgeting tool built
+          for freelancers who want clarity without spreadsheets. It analyzes your earnings, smooths unpredictable income,
+          and gives you a simple monthly “safe-to-spend” number you can trust. Start your free 14‑day trial today.
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<footer>© 2025 Copywriter Portfolio. All Rights Reserved.</footer>
+  <!-- MODAL 2 -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">LumiGlow Skincare</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Email Copy</p>
 
-<script>
-// Portfolio modals
-const items = document.querySelectorAll('.portfolio-item');
-items.forEach(item => {
-  item.addEventListener('click', () => {
-    document.getElementById(item.dataset.modal).style.display='flex';
-  });
-});
-document.querySelectorAll('.close-modal').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.parentElement.parentElement.style.display='none';
-  });
-});
-</script>
-<!-- ===================== MODAL JS ===================== -->
-<script>
-// Open modal
-function openTemplateModal() {
-  document.getElementById('modal-portfolio-template').style.display = 'flex';
-}
+        <div class="brief-box">
+          Client Brief:<br />
+          A skincare brand is promoting its new Vitamin C serum. Write a promotional email for existing customers.
+        </div>
 
-// Close modal
-document.querySelectorAll('.modal-close').forEach(btn => {
-    btn.addEventListener('click', () => {
-        btn.closest('.modal').style.display = 'none';
+        <div class="brief-box">
+          Final Output:<br />
+          Hi there, your glow routine just got an upgrade. Our new LumiGlow C‑Boost Serum brightens dull skin, fades
+          dark spots, and protects against daily stress. Enjoy 20% off for the next 72 hours.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3 -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">DeskStrong Coaching</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Landing Page</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A fitness coach is offering a 6-week home workout program for busy professionals.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Get stronger in just 6 weeks without stepping into a gym. DeskStrong is a no‑equipment home workout program
+          built for busy professionals. Each session is under 30 minutes and easy to follow.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4 -->
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">CalmNest</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Onboarding Flow</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A meditation app needs a 3-step onboarding flow that welcomes new users and encourages their first session.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Welcome to CalmNest — your space to slow down and reset. A few minutes a day can help you feel calmer, sleep
+          better, and stay more focused. We’ll guide you through your first 5‑minute session.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5 -->
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">CreatorScale Academy</div>
+      <div class="modal-body">
+        <p>Marketing Tool: VSL Script</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A course creator is selling a “YouTube Growth Blueprint” program.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          If you’ve been posting on YouTube and still feel invisible, you’re not alone. The YouTube Growth Blueprint
+          replaces guesswork with a proven strategy designed for real growth.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 6 -->
+  <div id="modal6" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">EcoSip Co.</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Product Description</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          An e-commerce store is launching a line of eco-friendly water bottles. Write product descriptions for a 750ml
+          insulated bottle focusing on sustainability, durability, and temperature retention.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          The EcoSip 750ml Insulated Bottle keeps drinks cold for 24 hours and hot for 12, thanks to double‑wall
+          stainless steel construction. It’s durable, leak‑proof, and designed to replace years of single‑use plastic.
+          With a scratch‑resistant finish and perfect everyday capacity, it’s ideal for work, travel, and workouts. Sip
+          sustainably and stay refreshed wherever you go.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 7 -->
+  <div id="modal7" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">TaskNest</div>
+      <div class="modal-body">
+        <p>Marketing Tool: App Copy</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A task management app needs microcopy for buttons, tooltips, and empty states. Tone should be friendly,
+          motivating, and productivity-focused.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Add New Task. Start Today. Mark as Done. Save for Later.<br />
+          Set a due date so future‑you doesn’t have to remember.<br />
+          Mark what matters most — we’ll help you focus.<br />
+          Group tasks with tags to see the bigger picture.<br />
+          No tasks yet — let’s create your first small win.<br />
+          Nothing done yet — check something off today.<br />
+          Organize your work into projects so every task has a home.<br />
+          Progress isn’t about doing everything — just the right next thing.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 8 -->
+  <div id="modal8" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">AdBlueprint Agency</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Lead Magnet</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A marketing agency is offering a free PDF titled “10 High-Converting Ad Templates.” Write a lead magnet opt-in
+          page brief that highlights value and instant usability.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Steal 10 proven ad templates you can launch today. This free PDF gives you plug‑and‑play frameworks used in
+          real campaigns, complete with hooks, angles, and fill‑in‑the‑blank prompts. Stop staring at a blank page and
+          start creating ads that convert. Enter your email to get instant access — no fluff, just actionable templates.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 9 -->
+  <div id="modal9" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">MarinaVista Realty</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Video Script</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A real estate agent wants a 45-second social media video script promoting a new luxury apartment listing with
+          sea views, modern amenities, and flexible payment plans.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Imagine waking up to a panoramic sea view every morning. MarinaVista Residences offers modern interiors,
+          floor‑to‑ceiling windows, a fully equipped kitchen, and premium finishes throughout. Enjoy access to a private
+          gym, infinity pool, and residents‑only lounge. With 24/7 security, dedicated parking, and flexible payment
+          plans, your dream home is closer than you think. Book a viewing today and experience MarinaVista for yourself.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 10 -->
+  <div id="modal10" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">LingoPulse</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Sales Page</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A language-learning platform is launching a new AI tutor. Create a sales page brief focusing on personalized
+          lessons, real-time corrections, and faster fluency.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Speak confidently faster with LingoPulse AI Tutor. It adapts to your level, corrects mistakes in real time, and
+          helps you practice natural conversations anytime. Build fluency through short, focused sessions designed around
+          your goals. Thousands of learners already trust LingoPulse to improve pronunciation, grammar, and everyday
+          speaking skills. Try it free for 7 days and experience the difference.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 11 -->
+  <div id="modal11" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">FreshStart Nutrition</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Lead Magnet</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A nutritionist is offering a free “7-Day Meal Prep Guide.” Write a lead magnet brief that emphasizes simplicity,
+          healthy eating, and time savings.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          Eat healthier all week with one simple prep day. The free 7‑Day Meal Prep Guide includes a full weekly menu,
+          step‑by‑step prep instructions, a printable shopping list, and storage tips to keep meals fresh. No strict
+          diets — just practical, easy choices that save time and boost energy. Enter your email to get the guide
+          delivered instantly.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 12 -->
+  <div id="modal12" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header">SyncBoard</div>
+      <div class="modal-body">
+        <p>Marketing Tool: Landing Page</p>
+
+        <div class="brief-box">
+          Client Brief:<br />
+          A SaaS startup is launching a project collaboration tool for remote teams. Create a landing page brief
+          focusing on real-time chat, shared boards, and seamless file management.
+        </div>
+
+        <div class="brief-box">
+          Final Output:<br />
+          SyncBoard brings real‑time chat, shared boards, and file management into one workspace for remote teams. Keep
+          conversations organized, plan visually, and access files without digging through threads. Reduce meetings,
+          increase clarity, and help your team stay aligned from anywhere. Start your free team trial today.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <span><i class="fa-solid fa-pen-nib"></i> Conversion-focused Copywriting</span>
+        <span><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</span>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Fahad Ali — Copywriter Portfolio. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast container -->
+  <div id="toast-container"></div>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("2472rTBYQayyprDFP");
+    })();
+  </script>
+
+  <!-- JS: Contact Form + Smooth Scroll + Modals -->
+  <script>
+    // ---------- Toast helper ----------
+    function showToast(message, type = "success") {
+      const container = document.getElementById("toast-container");
+      if (!container) return;
+
+      const toast = document.createElement("div");
+      toast.classList.add("toast", type === "error" ? "toast-error" : "toast-success");
+      toast.textContent = message;
+
+      container.appendChild(toast);
+
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    // ---------- Validation helpers ----------
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).toLowerCase());
+    }
+
+    function clearErrors() {
+      ["name", "email", "message"].forEach(id => {
+        document.getElementById(id).classList.remove("error");
+        document.getElementById(id + "Error").textContent = "";
+      });
+    }
+
+    function showFieldError(inputId, errorId, message) {
+      document.getElementById(inputId).classList.add("error");
+      document.getElementById(errorId).textContent = message;
+    }
+
+    // ---------- Contact form logic ----------
+    document.addEventListener("DOMContentLoaded", function () {
+      const sendBtn = document.getElementById("sendBtn");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const messageInput = document.getElementById("message");
+
+      sendBtn.addEventListener("click", function () {
+        clearErrors();
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+        let hasError = false;
+
+        if (name.length < 2) {
+          showFieldError("name", "nameError", "Please enter at least 2 characters.");
+          hasError = true;
+        }
+
+        if (!email) {
+          showFieldError("email", "emailError", "Email is required.");
+          hasError = true;
+        } else if (!isValidEmail(email)) {
+          showFieldError("email", "emailError", "Please enter a valid email address.");
+          hasError = true;
+        }
+
+        if (message.length < 10) {
+          showFieldError("message", "messageError", "Please enter at least 10 characters.");
+          hasError = true;
+        }
+
+        if (hasError) {
+          showToast("Please fix the highlighted fields.", "error");
+          return;
+        }
+
+        sendBtn.disabled = true;
+        sendBtn.textContent = "Sending...";
+
+        const timestamp = new Date().toLocaleString();
+
+        emailjs
+          .send("service_kdcbh2f", "template_ggfo98a", {
+            Name: name,
+            Email: email,
+            Message: message,
+            time: timestamp
+          })
+          .then(() => {
+            return emailjs.send("service_kdcbh2f", "template_gcx6zre", {
+              Name: name,
+              Email: email,
+              time: timestamp
+            });
+          })
+          .then(() => {
+            showToast("Message sent successfully!", "success");
+
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+
+            sendBtn.disabled = false;
+            sendBtn.textContent = "Send Message";
+          })
+          .catch(error => {
+            console.error("EmailJS error:", error);
+            showToast("Something went wrong. Please try again.", "error");
+
+            sendBtn.disabled = false;
+            sendBtn.textContent = "Send Message";
+          });
+      });
+
+      // ---------- Smooth scroll ----------
+      document.querySelectorAll('.floating-menu a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.getElementById(this.getAttribute("href").substring(1));
+          if (!target) return;
+
+          const navbarHeight = document.querySelector(".floating-menu").offsetHeight;
+          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - (navbarHeight + 12);
+
+          window.scrollTo({ top: offsetTop, behavior: "smooth" });
+        });
+      });
+
+      // ---------- Modals ----------
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+      const modals = document.querySelectorAll(".modal");
+
+      portfolioItems.forEach(item => {
+        item.addEventListener("click", () => {
+          const modal = document.getElementById(item.dataset.modal);
+          if (modal) modal.classList.add("show");
+        });
+      });
+
+      document.querySelectorAll(".modal-close").forEach(btn => {
+        btn.addEventListener("click", () => {
+          btn.closest(".modal").classList.remove("show");
+        });
+      });
+
+      modals.forEach(modal => {
+        modal.addEventListener("click", e => {
+          if (e.target === modal) modal.classList.remove("show");
+        });
+      });
+
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape") {
+          modals.forEach(modal => modal.classList.remove("show"));
+        }
+      });
     });
-});
+  </script>
 
-// Close when clicking outside
-window.addEventListener('click', function(e) {
-  document.querySelectorAll('.modal').forEach(modal => {
-    if (e.target === modal) modal.style.display = "none";
-  });
-});
-</script>
 </body>
 </html>
+
