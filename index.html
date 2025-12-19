@@ -23,7 +23,7 @@
       font-family: 'Inter', sans-serif;
     }
 
-    html {
+    html, body {
       scroll-behavior: smooth;
     }
 
@@ -89,6 +89,9 @@
       border-radius: 18px;
       overflow: hidden;
     }
+	section {
+	  scroll-margin-top: 80px;
+	}
 
     section::before {
       content: "";
@@ -486,6 +489,21 @@
       font-size: 13px;
       border-top: 1px solid rgba(148, 163, 184, 0.25);
     }
+	.portfolio-title {
+	  text-align: center;
+	  font-size: 34px;
+	  font-weight: 800;
+	  color: #d8e4ff; /* soft light blue */
+	  margin: 0;
+	}
+
+	.portfolio-subtitle {
+	  text-align: center;
+	  font-size: 18px;
+	  color: #d8e4ff; /* soft light blue */
+	  margin-top: 8px;
+	}
+
   </style>
 </head>
 <body>
@@ -501,6 +519,11 @@
   </nav>
 
   <main>
+  <!-- Portfolio Title --> 
+  <header class="portfolio-header"> 
+    <h1 class="portfolio-title">FAHAD ALI — Portfolio</h1> 
+    <p class="portfolio-subtitle">Conversion‑Focused Copywriting & UX Messaging</p> 
+  </header>
     <!-- BIO -->
     <section id="bio">
       <div class="section-content">
@@ -568,87 +591,92 @@
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
-      <div class="section-content">
-        <div class="section-title">Featured Work</div>
-        <div class="underline"></div>
+   <!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-content">
+    <div class="section-title">Featured Work</div>
+    <div class="underline"></div>
 
-        <div class="portfolio-grid">
-          <div class="portfolio-item" data-modal="modal1">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-file-signature"></i></div>
-            <h4>Sales Page – FreeLanceFlow</h4>
-            <p>AI-powered budgeting tool sales page focused on clarity, trust, and trial sign-ups.</p>
-          </div>
+    <div class="portfolio-grid">
 
-          <div class="portfolio-item" data-modal="modal2">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-            <h4>Email Copy – LumiGlow Skincare</h4>
-            <p>Promo email for a Vitamin C serum launch with urgency and benefit-led messaging.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal3">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-globe"></i></div>
-            <h4>Landing Page – DeskStrong Coaching</h4>
-            <p>Program page for a 6-week home workout offer aimed at busy professionals.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal4">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-seedling"></i></div>
-            <h4>Onboarding Flow – CalmNest</h4>
-            <p>3-step onboarding flow for a meditation app that increases first-session completion.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal5">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-film"></i></div>
-            <h4>VSL Script – CreatorScale Academy</h4>
-            <p>Intro script for a YouTube growth program that hooks creators and frames the solution.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal6">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-bottle-water"></i></div>
-            <h4>Product Description – EcoSip Co.</h4>
-            <p>Conversion-focused description for a sustainable insulated water bottle line.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal7">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-list-check"></i></div>
-            <h4>App Microcopy – TaskNest</h4>
-            <p>Friendly, motivating microcopy for task states, tooltips, and action buttons.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal8">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-magnet"></i></div>
-            <h4>Lead Magnet – AdBlueprint Agency</h4>
-            <p>Opt-in page brief for “10 High-Converting Ad Templates” PDF.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal9">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-house-chimney"></i></div>
-            <h4>Video Script – MarinaVista Realty</h4>
-            <p>45-second listing video script for a luxury sea-view apartment.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal10">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-language"></i></div>
-            <h4>Sales Page – LingoPulse AI Tutor</h4>
-            <p>Sales page brief centered on personalized lessons and real-time corrections.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal11">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-carrot"></i></div>
-            <h4>Lead Magnet – FreshStart Nutrition</h4>
-            <p>Opt-in brief for a “7-Day Meal Prep Guide” focused on ease and time savings.</p>
-          </div>
-
-          <div class="portfolio-item" data-modal="modal12">
-            <div class="portfolio-item-icon"><i class="fa-solid fa-diagram-project"></i></div>
-            <h4>Landing Page – SyncBoard</h4>
-            <p>Landing page brief for a remote collaboration tool with boards and file management.</p>
-          </div>
-        </div>
+      <div class="portfolio-item" data-modal="modal1">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-file-signature"></i></div>
+        <h4>Sales Page – FreeLanceFlow</h4>
+        <p>AI-powered budgeting tool sales page focused on clarity, trust, and trial sign-ups.</p>
       </div>
-    </section>
+
+      <div class="portfolio-item" data-modal="modal2">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <h4>Email Copy – LumiGlow Skincare</h4>
+        <p>Promo email for a Vitamin C serum launch with urgency and benefit-led messaging.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal3">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-globe"></i></div>
+        <h4>Landing Page – DeskStrong Coaching</h4>
+        <p>Program page for a 6-week home workout offer aimed at busy professionals.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal4">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h4>Onboarding Flow – CalmNest</h4>
+        <p>3-step onboarding flow for a meditation app that increases first-session completion.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal6">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-bottle-water"></i></div>
+        <h4>Product Description – EcoSip Co.</h4>
+        <p>Conversion-focused description for a sustainable insulated water bottle line.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal7">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-list-check"></i></div>
+        <h4>App Microcopy – TaskNest</h4>
+        <p>Friendly, motivating microcopy for task states, tooltips, and action buttons.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal10">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-language"></i></div>
+        <h4>Sales Page – LingoPulse AI Tutor</h4>
+        <p>Sales page brief centered on personalized lessons and real-time corrections.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal12">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h4>Landing Page – SyncBoard</h4>
+        <p>Landing page brief for a remote collaboration tool with boards and file management.</p>
+      </div>
+
+      <!-- NEW MICRO-TASKS BELOW -->
+
+      <div class="portfolio-item" data-modal="modal13">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h4>Micro‑Copy Template Pack – SwiftLaunch</h4>
+        <p>High‑impact templates for buttons, tooltips, and empty states for fast product launches.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal14">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h4>App Store Taglines – SnapFit Tracker</h4>
+        <p>Punchy, benefit‑driven taglines optimized for App Store visibility and clarity.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal15">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <h4>Hero Section Hooks – FlowNote</h4>
+        <p>Emotion‑driven hooks crafted to boost first‑impression conversions on landing pages.</p>
+      </div>
+
+      <div class="portfolio-item" data-modal="modal16">
+        <div class="portfolio-item-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
+        <h4>Banner Micro‑Copy Variations – ShopEase</h4>
+        <p>Concise promotional banner lines designed to highlight offers and drive clicks.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- WHY ME -->
     <section id="why-me">
@@ -1119,7 +1147,36 @@
 
       container.appendChild(toast);
 
-      setTimeout(() => toast.remove(), 4000);
+      function smoothScrollTo(target, duration = 800) {
+  const element = document.querySelector(target);
+  const start = window.pageYOffset;
+  const end = element.getBoundingClientRect().top + window.pageYOffset - 80; 
+  const distance = end - start;
+  let startTime = null;
+
+  function easeInOutQuad(t) {
+    return t < 0.5
+      ? 2 * t * t
+      : -1 + (4 - 2 * t) * t;
+  }
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    const easedProgress = easeInOutQuad(progress);
+
+    window.scrollTo(0, start + distance * easedProgress);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation);
+    }
+  }
+
+  requestAnimationFrame(animation);
+}
+ 
+
     }
 
     // ---------- Validation helpers ----------
