@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fahad Ali — Resume</title>
+
+  <!-- Dark Card Theme CSS -->
+  <style>
+    body {
+      margin: 0;
+      background: #050b13; /* dark base */
+      color: #f9fbff;
+      font: 16px/1.7 "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 24px;
+    }
+
+    /* Universal card style */
+    .section-card {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .section-card:hover {
+      transform: translateY(-3px) scale(1.015);
+      box-shadow: 0 10px 22px rgba(29, 209, 161, 0.18);
+      border-color: rgba(29, 209, 161, 0.5);
+    }
+
+    /* Section titles */
+    .section-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #f9fbff;
+    }
+    .underline {
+      width: 64px;
+      height: 3px;
+      background: #1dd1a1;
+      margin: 10px auto 24px auto;
+      border-radius: 999px;
+    }
+
+    /* Text blocks */
+    .bio-text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 760px;
+      margin: 0 auto;
+      color: #d8e4ff;
+    }
+    .bio-highlight {
+      display: block;
+      margin-top: 16px;
+      font-size: 15px;
+      color: #9cb6ff;
+      text-align: center;
+    }
+
+    /* Grid for skills/experience */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+
+    /* Card items inside grids */
+    .card-item {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 14px;
+      padding: 20px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+      transition: all 0.25s ease;
+    }
+    .card-item:hover {
+      transform: translateY(-3px) scale(1.015);
+      box-shadow: 0 10px 22px rgba(29, 209, 161, 0.18);
+      border-color: rgba(29, 209, 161, 0.5);
+    }
+    .card-item h4 {
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+    .card-item p {
+      font-size: 14px;
+      color: #c8d5ff;
+      line-height: 1.6;
+    }
+
+    /* Contact section */
+    .contact-details p {
+      margin-bottom: 12px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #d9e4ff;
+    }
+    .contact-details i {
+      color: #1dd1a1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 16px 30px;
+      background: #050b13;
+      color: #7f8baa;
+      font-size: 13px;
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .wrap { padding: 0 16px; margin: 40px auto; }
+      .section-title { font-size: 22px; }
+      .bio-text { font-size: 16px; }
+      .grid { grid-template-columns: 1fr; gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .section-title { font-size: 20px; }
+      .bio-text { font-size: 15px; }
+      body { font-size: 15px; }
+      .section-card { padding: 24px; }
+      .card-item { padding: 16px; }
+    }
+    .resume-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #f9fbff; /* accent green */
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- Resume Title -->
+<h1 class="resume-title">FAHAD ALI — The Copywriter</h1>
+      
+  <main class="wrap">
+
+
+    <!-- Positioning -->
+    <div class="section-card">
+      <h2 class="section-title">💬 Positioning Statement</h2>
+      <div class="underline"></div>
+      <p class="bio-text">
+        Helping brands simplify, connect, and convert through psychology‑driven copy.
+        I craft messaging that builds trust, reduces friction, and drives measurable outcomes.
+      </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="section-card">
+      <h2 class="section-title">🧠 Skills</h2>
+      <div class="underline"></div>
+      <div class="grid">
+        <div class="card-item"><h4>Ad Copywriting</h4><p>Emotional, practical, social proof angles</p></div>
+        <div class="card-item"><h4>Landing Page Copy</h4><p>Benefit‑first, conversion‑driven messaging</p></div>
+        <div class="card-item"><h4>Email & CRM Flows</h4><p>Welcome, abandoned cart, product launch emails</p></div>
+        <div class="card-item"><h4>Messaging Frameworks</h4><p>Value propositions, taglines, brand voice</p></div>
+        <div class="card-item"><h4>UX Microcopy</h4><p>Onboarding, checkout, error flows</p></div>
+        <div class="card-item"><h4>SEO Content</h4><p>Short‑form explainers, long‑form guides</p></div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section-card">
+      <h2 class="section-title">📝 Experience</h2>
+      <div class="underline"></div>
+      <div class="grid">
+        <div class="card-item">
+          <h4>Freelance Copywriter — 2021–Present</h4>
+          <p>Worked with wellness brands, SaaS startups, and educators to craft conversion‑driven copy across digital channels.</p>
+        </div>
+        <div class="card-item">
+          <h4>Toolsmith & UX Strategist — 2020–2021</h4>
+          <p>Built intuitive workflows and messaging frameworks for creators and educators.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section-card">
+      <h2 class="section-title">🎓 Education</h2>
+      <div class="underline"></div>
+      <p class="bio-text">
+        <strong>Masters in Computer Sciences</strong><br />
+        SZABIST, Pakistan
+      </p>
+    </div>
+
+    <!-- About -->
+    <div class="section-card">
+      <h2 class="section-title">👤 About Me</h2>
+      <div class="underline"></div>
+      <p class="bio-text">
+        Creative digital entrepreneur and psychology‑driven copywriter. I specialize in simplifying complex ideas,
+        building trust, and crafting emotionally resonant messaging. My work blends UX thinking, brand strategy,
+        and conversion clarity.
+      </p>
+      <span class="bio-highlight">I’ve worked with wellness brands, fitness apps, and supplement companies to improve conversion rates and build emotional clarity.</span>
+    </div>
+
+    <!-- Contact -->
+<div class="section-card">
+  <h2 class="section-title">📞 Contact</h2>
+  <div class="underline"></div>
+  <div class="contact-details">
+    <p>✉️ <a href="mailto:fahadwrites@gmail.com">fahadwrites@gmail.com</a></p>
+    <p>📸 <a href="https://www.instagram.com/fahadcopycrafter" class="fa fa-instagram">@fahadcopycrafter</a>
+    <p>🌐 <a href="smfali.github.io/portfolio">smfali.github.io/portfolio</a></p>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>© Fahad Ali — Resume. Styled with dark card theme.</p>
+    </footer>
+  </main>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
