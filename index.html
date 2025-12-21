@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -504,23 +505,29 @@
 	  margin-top: 8px;
 	}
 	.portfolio-header{
-	  padding-top:30px;
-	} 
-	 /* popups the modal on click  */
-	.modal {
-	  position: fixed;
-	  top: 0; left: 0;
-	  width: 100%; height: 100%;
-	  background: rgba(0,0,0,0.6);
-	  display: flex; align-items: center; justify-content: center;
+		padding-top:30px;
 	}
-	.modal-content {
-	  background: #fff; padding: 20px; border-radius: 6px;
-	  max-width: 400px; text-align: center;
+	
+	.portfolio-item {
+	  position: relative; /* allows absolute positioning inside */
+	  padding-bottom: 40px; /* add space so text doesn’t overlap content */
 	}
-	.close { cursor: pointer; font-size: 20px; float: right; }
-	[hidden] { display: none !important; }  
+	
+	/* click to vew details */
+	
+	.view-details {
+	  position: absolute;
+	  bottom: 8px;
+	  right: 12px;
+	  font-size: 13px;
+	  font-weight: 600;
+	  color: #0073e6;
+	  cursor: pointer;
+	}
 
+	.view-details:hover {
+	  text-decoration: underline;
+	}
   </style>
 </head>
 <body>
@@ -608,7 +615,7 @@
       </div>
     </section>
 
-   <!-- PORTFOLIO -->
+<!-- PORTFOLIO -->
 <section id="portfolio">
   <div class="section-content">
     <div class="section-title">Featured Work</div>
@@ -627,49 +634,49 @@
         <div class="portfolio-item-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
         <h4>Email Copy – LumiGlow Skincare</h4>
         <p>Promo email for a Vitamin C serum launch with urgency and benefit-led messaging.</p>
-		<span class="view-details">Click to view Details</span>  
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal3">
         <div class="portfolio-item-icon"><i class="fa-solid fa-globe"></i></div>
         <h4>Landing Page – DeskStrong Coaching</h4>
         <p>Program page for a 6-week home workout offer aimed at busy professionals.</p>
-		<span class="view-details">Click to view Details</span>    
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal4">
         <div class="portfolio-item-icon"><i class="fa-solid fa-seedling"></i></div>
         <h4>Onboarding Flow – CalmNest</h4>
         <p>3-step onboarding flow for a meditation app that increases first-session completion.</p>
-		<span class="view-details">Click to view Details</span>  	
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal5">
         <div class="portfolio-item-icon"><i class="fa-solid fa-bottle-water"></i></div>
         <h4>Product Description – EcoSip Co.</h4>
         <p>Conversion-focused description for a sustainable insulated water bottle line.</p>
-		<span class="view-details">Click to view Details</span>    
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal6">
         <div class="portfolio-item-icon"><i class="fa-solid fa-list-check"></i></div>
         <h4>App Microcopy – TaskNest</h4>
         <p>Friendly, motivating microcopy for task states, tooltips, and action buttons.</p>
-		<span class="view-details">Click to view Details</span>    
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal7">
         <div class="portfolio-item-icon"><i class="fa-solid fa-language"></i></div>
         <h4>Sales Page – LingoPulse AI Tutor</h4>
         <p>Sales page brief centered on personalized lessons and real-time corrections.</p>
-		<span class="view-details">Click to view Details</span>  
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal8">
         <div class="portfolio-item-icon"><i class="fa-solid fa-diagram-project"></i></div>
         <h4>Landing Page – SyncBoard</h4>
         <p>Landing page brief for a remote collaboration tool with boards and file management.</p>
-		<span class="view-details">Click to view Details</span>    
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <!-- NEW MICRO-TASKS BELOW -->
@@ -678,33 +685,33 @@
         <div class="portfolio-item-icon"><i class="fa-solid fa-bolt"></i></div>
         <h4>Micro‑Copy Template Pack – SwiftLaunch</h4>
         <p>High‑impact templates for buttons, tooltips, and empty states for fast product launches.</p>
-		<span class="view-details">Click to view Details</span>    
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal10">
         <div class="portfolio-item-icon"><i class="fa-solid fa-mobile-screen"></i></div>
         <h4>App Store Taglines – SnapFit Tracker</h4>
         <p>Punchy, benefit‑driven taglines optimized for App Store visibility and clarity.</p>
-		<span class="view-details">Click to view Details</span>  
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal11">
         <div class="portfolio-item-icon"><i class="fa-solid fa-bullhorn"></i></div>
         <h4>Hero Section Hooks – FlowNote</h4>
         <p>Emotion‑driven hooks crafted to boost first‑impression conversions on landing pages.</p>
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal12">
         <div class="portfolio-item-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
         <h4>Banner Micro‑Copy Variations – ShopEase</h4>
         <p>Concise promotional banner lines designed to highlight offers and drive clicks.</p>
-		<span class="view-details">Click to view Details</span>  
+		<span class="view-details">Click to view Details</span>
       </div>
 
     </div>
   </div>
 </section>
-
 
 
     <!-- WHY ME -->
@@ -840,12 +847,15 @@
                 <small class="error-message" id="messageError"></small>
               </div>
 
-              <button type="button" id="sendBtn">Send Message</button>
+              <button type="submit" id="sendBtn">Send Message</button>
+			  <div id="formStatus"></div> <!-- status message -->
             </form>
           </div>
         </div>
       </div>
     </section>
+	<!-- Toast element --> 
+	<div id="toast"></div>
   </main>
 
   <!-- ===================== MODALS ===================== -->
@@ -1009,6 +1019,7 @@
     </div>
 </div>
 
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
@@ -1032,10 +1043,23 @@
       emailjs.init("2472rTBYQayyprDFP");
     })();
   </script>
+<script>
+  console.log("Script loaded"); // put this as the first line
 
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    console.log("Form submitted"); // this should appear when you submit
+    
+    // fetch logic here...
+  });
+</script>
+	
   <!-- JS: Contact Form + Smooth Scroll + Modals -->
   <script>
-    // ---------- Toast helper ----------
+      // ---------- Toast helper ----------
     function showToast(message, type = "success") {
       const container = document.getElementById("toast-container");
       if (!container) return;
@@ -1096,80 +1120,91 @@
     }
 
     // ---------- Contact form logic ----------
-    document.addEventListener("DOMContentLoaded", function () {
-      const sendBtn = document.getElementById("sendBtn");
-      const nameInput = document.getElementById("name");
-      const emailInput = document.getElementById("email");
-      const messageInput = document.getElementById("message");
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize EmailJS with your public key
+  emailjs.init("2472rTBYQayyprDFP"); 
 
-      sendBtn.addEventListener("click", function () {
-        clearErrors();
+  const form = document.getElementById("contactForm");
+  const sendBtn = document.getElementById("sendBtn");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
 
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
-        const message = messageInput.value.trim();
-        let hasError = false;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page reload
+    clearErrors();
 
-        if (name.length < 2) {
-          showFieldError("name", "nameError", "Please enter at least 2 characters.");
-          hasError = true;
-        }
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+    let hasError = false;
 
-        if (!email) {
-          showFieldError("email", "emailError", "Email is required.");
-          hasError = true;
-        } else if (!isValidEmail(email)) {
-          showFieldError("email", "emailError", "Please enter a valid email address.");
-          hasError = true;
-        }
+    if (name.length < 2) {
+      showFieldError("name", "nameError", "Please enter at least 2 characters.");
+      hasError = true;
+    }
 
-        if (message.length < 10) {
-          showFieldError("message", "messageError", "Please enter at least 10 characters.");
-          hasError = true;
-        }
+    if (!email) {
+      showFieldError("email", "emailError", "Email is required.");
+      hasError = true;
+    } else if (!isValidEmail(email)) {
+      showFieldError("email", "emailError", "Please enter a valid email address.");
+      hasError = true;
+    }
 
-        if (hasError) {
-          showToast("Please fix the highlighted fields.", "error");
-          return;
-        }
+    if (message.length < 10) {
+      showFieldError("message", "messageError", "Please enter at least 10 characters.");
+      hasError = true;
+    }
 
-        sendBtn.disabled = true;
-        sendBtn.textContent = "Sending...";
+    if (hasError) {
+      showToast("Please fix the highlighted fields.", "error");
+      return;
+    }
 
-        const timestamp = new Date().toLocaleString();
+    // disable button while sending
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Sending...";
 
-        emailjs
-          .send("service_kdcbh2f", "template_ggfo98a", {
-            Name: name,
-            Email: email,
-            Message: message,
-            time: timestamp
-          })
-          .then(() => {
-            return emailjs.send("service_kdcbh2f", "template_gcx6zre", {
-              Name: name,
-              Email: email,
-              time: timestamp
-            });
-          })
-          .then(() => {
-            showToast("Message sent successfully!", "success");
+    const timestamp = new Date().toLocaleString();
 
-            nameInput.value = "";
-            emailInput.value = "";
-            messageInput.value = "";
+    emailjs
+      .send("service_kdcbh2f", "template_ggfo98a", {
+        Name: name,
+        Email: email,
+        Message: message,
+        time: timestamp
+      })
+      .then(() => {
+        return emailjs.send("service_kdcbh2f", "template_gcx6zre", {
+          Name: name,
+          Email: email,
+          time: timestamp
+        });
+      })
+      .then(() => {
+        showToast("Message sent successfully!", "success");
 
-            sendBtn.disabled = false;
-            sendBtn.textContent = "Send Message";
-          })
-          .catch(error => {
-            console.error("EmailJS error:", error);
-            showToast("Something went wrong. Please try again.", "error");
+        // reset form
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
 
-            sendBtn.disabled = false;
-            sendBtn.textContent = "Send Message";
-          });
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send Message";
+      })
+      .catch(error => {
+        console.error("EmailJS error:", error);
+        showToast("Something went wrong. Please try again.", "error");
+
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send Message";
       });
+  }); // closes form.addEventListener
+
+
+
+
 
       // ---------- Smooth scroll ----------
       document.querySelectorAll('.floating-menu a[href^="#"]').forEach(link => {
@@ -1214,30 +1249,8 @@
         }
       });
     });
-	
-	// ---------- featured work view detail  link ----------
-	  /*
-	  document.addEventListener("DOMContentLoaded", () => {
-  const trigger = document.querySelector(".view-details");
-  const modal = document.getElementById("myModal");
-
-  // Show modal
-  trigger.onclick = () => modal.hidden = false;
-
-  // Close modal when clicking the close button or outside content
-  modal.onclick = (e) => {
-    if (e.target.classList.contains("close") || e.target === modal) {
-      modal.hidden = true;
-    }
-  };
-}); */
-	  
   </script>
 
 </body>
 </html>
-
-
-
-
 
