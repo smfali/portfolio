@@ -505,7 +505,21 @@
 	}
 	.portfolio-header{
 	  padding-top:30px;
-	}  
+	} 
+	 /* popups the modal on click  */
+	.modal {
+	  position: fixed;
+	  top: 0; left: 0;
+	  width: 100%; height: 100%;
+	  background: rgba(0,0,0,0.6);
+	  display: flex; align-items: center; justify-content: center;
+	}
+	.modal-content {
+	  background: #fff; padding: 20px; border-radius: 6px;
+	  max-width: 400px; text-align: center;
+	}
+	.close { cursor: pointer; font-size: 20px; float: right; }
+	[hidden] { display: none !important; }  
 
   </style>
 </head>
@@ -606,48 +620,56 @@
         <div class="portfolio-item-icon"><i class="fa-solid fa-file-signature"></i></div>
         <h4>Sales Page – FreeLanceFlow</h4>
         <p>AI-powered budgeting tool sales page focused on clarity, trust, and trial sign-ups.</p>
+		<span class="view-details">Click to view Details</span>
       </div>
 
       <div class="portfolio-item" data-modal="modal2">
         <div class="portfolio-item-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
         <h4>Email Copy – LumiGlow Skincare</h4>
         <p>Promo email for a Vitamin C serum launch with urgency and benefit-led messaging.</p>
+		<span class="view-details">Click to view Details</span>  
       </div>
 
       <div class="portfolio-item" data-modal="modal3">
         <div class="portfolio-item-icon"><i class="fa-solid fa-globe"></i></div>
         <h4>Landing Page – DeskStrong Coaching</h4>
         <p>Program page for a 6-week home workout offer aimed at busy professionals.</p>
+		<span class="view-details">Click to view Details</span>    
       </div>
 
       <div class="portfolio-item" data-modal="modal4">
         <div class="portfolio-item-icon"><i class="fa-solid fa-seedling"></i></div>
         <h4>Onboarding Flow – CalmNest</h4>
         <p>3-step onboarding flow for a meditation app that increases first-session completion.</p>
+		<span class="view-details">Click to view Details</span>  	
       </div>
 
       <div class="portfolio-item" data-modal="modal5">
         <div class="portfolio-item-icon"><i class="fa-solid fa-bottle-water"></i></div>
         <h4>Product Description – EcoSip Co.</h4>
         <p>Conversion-focused description for a sustainable insulated water bottle line.</p>
+		<span class="view-details">Click to view Details</span>    
       </div>
 
       <div class="portfolio-item" data-modal="modal6">
         <div class="portfolio-item-icon"><i class="fa-solid fa-list-check"></i></div>
         <h4>App Microcopy – TaskNest</h4>
         <p>Friendly, motivating microcopy for task states, tooltips, and action buttons.</p>
+		<span class="view-details">Click to view Details</span>    
       </div>
 
       <div class="portfolio-item" data-modal="modal7">
         <div class="portfolio-item-icon"><i class="fa-solid fa-language"></i></div>
         <h4>Sales Page – LingoPulse AI Tutor</h4>
         <p>Sales page brief centered on personalized lessons and real-time corrections.</p>
+		<span class="view-details">Click to view Details</span>  
       </div>
 
       <div class="portfolio-item" data-modal="modal8">
         <div class="portfolio-item-icon"><i class="fa-solid fa-diagram-project"></i></div>
         <h4>Landing Page – SyncBoard</h4>
         <p>Landing page brief for a remote collaboration tool with boards and file management.</p>
+		<span class="view-details">Click to view Details</span>    
       </div>
 
       <!-- NEW MICRO-TASKS BELOW -->
@@ -656,12 +678,14 @@
         <div class="portfolio-item-icon"><i class="fa-solid fa-bolt"></i></div>
         <h4>Micro‑Copy Template Pack – SwiftLaunch</h4>
         <p>High‑impact templates for buttons, tooltips, and empty states for fast product launches.</p>
+		<span class="view-details">Click to view Details</span>    
       </div>
 
       <div class="portfolio-item" data-modal="modal10">
         <div class="portfolio-item-icon"><i class="fa-solid fa-mobile-screen"></i></div>
         <h4>App Store Taglines – SnapFit Tracker</h4>
         <p>Punchy, benefit‑driven taglines optimized for App Store visibility and clarity.</p>
+		<span class="view-details">Click to view Details</span>  
       </div>
 
       <div class="portfolio-item" data-modal="modal11">
@@ -674,6 +698,7 @@
         <div class="portfolio-item-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
         <h4>Banner Micro‑Copy Variations – ShopEase</h4>
         <p>Concise promotional banner lines designed to highlight offers and drive clicks.</p>
+		<span class="view-details">Click to view Details</span>  
       </div>
 
     </div>
@@ -1189,10 +1214,28 @@
         }
       });
     });
+	
+	// ---------- featured work view detail  link ----------
+	  document.addEventListener("DOMContentLoaded", () => {
+  const trigger = document.querySelector(".view-details");
+  const modal = document.getElementById("myModal");
+
+  // Show modal
+  trigger.onclick = () => modal.hidden = false;
+
+  // Close modal when clicking the close button or outside content
+  modal.onclick = (e) => {
+    if (e.target.classList.contains("close") || e.target === modal) {
+      modal.hidden = true;
+    }
+  };
+});
+	  
   </script>
 
 </body>
 </html>
+
 
 
 
